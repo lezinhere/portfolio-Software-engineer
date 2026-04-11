@@ -54,10 +54,15 @@ const Hero = () => {
         <h1 className="text-xl lg:text-3xl xl:text-4xl font-medium mb-4">
           My name is <span className="text-c1">Lezin VM</span>,<br />
         </h1>
-        <div className="flex items-center gap-3 mb-6 bg-white/50 w-fit mx-auto lg:mx-0 px-4 py-2 border border-black/10 rounded-full shadow-sm max-w-full">
+        <a 
+          href="https://www.credly.com/badges/b44d41dd-b711-468c-98d1-3143b26adff6" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="flex items-center gap-3 mb-6 bg-white/50 hover:bg-white/80 transition-colors cursor-pointer w-fit mx-auto lg:mx-0 px-4 py-2 border border-black/10 rounded-full shadow-sm max-w-full"
+        >
           <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" className="h-6 w-auto" />
           <span className="text-sm lg:text-base font-bold text-black/80 truncate">AWS Certified Solutions Architect</span>
-        </div>
+        </a>
         <h2 className="m-0 text-base lg:text-3xl xl:text-4xl text-black opacity-50 mb-3 lg:mb-6 font-medium">
           and I might know a bit about
         </h2>
