@@ -11,6 +11,13 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Dopamine Couch DevOps Infrastructure",
+    icon: Server,
+    description: "Production-grade DevOps setup for a web application featuring a Dockerized backend, frontend, and database. Implemented a multi-environment setup (production & staging) with an NGINX reverse proxy and SSL. Includes automation scripts for deployment and logs, plus uptime monitoring and alerting using UptimeRobot (100% availability tracking).",
+    technologies: ["Docker Compose", "NGINX", "MySQL", "UptimeRobot", "DevOps"],
+    link: "https://github.com/lezinhere/dopaminecouch-devops-infra",
+  },
+  {
     title: "Terraform EKS Infrastructure Pipeline using Jenkins",
     icon: Server,
     description: "Designed an Infrastructure-as-Code setup using Terraform to provision AWS networking resources and integrated a Jenkins pipeline to automate infrastructure deployment with remote state management using S3 and DynamoDB.",
@@ -27,8 +34,8 @@ const projects: Project[] = [
   {
     title: "ClinicCMS - Modern Clinic Management System",
     icon: Activity,
-    description: "A full-stack SaaS solution designed to streamline healthcare facility operations. Features dedicated portals for Patients, Doctors, Pharmacists, and Lab Technicians, providing a seamless workflow from smart appointment booking to real-time queues, digital prescriptions, and lab test management.",
-    technologies: ["React.js", "Next.js", "MongoDB", "Prisma ORM", "Tailwind CSS"],
+    description: "A containerised full-stack SaaS solution designed to streamline healthcare facility operations. Features dedicated portals for Patients, Doctors, Pharmacists, and Lab Technicians, providing a seamless workflow from smart appointment booking to real-time queues, digital prescriptions, and lab test management.",
+    technologies: ["React.js", "Next.js", "MongoDB", "Prisma ORM", "Tailwind CSS", "Docker"],
     link: "https://github.com/lezinhere/clinic-cms",
   },
   {
@@ -38,14 +45,6 @@ const projects: Project[] = [
       "An AI-powered platform designed for automated candidate assessments and interview processes. Built with scalability in mind and deployed on AWS cloud infrastructure for high availability and performance.",
     technologies: ["AWS", "AI/ML", "Python", "Cloud Infrastructure"],
     link: "https://github.com/lezinhere/AI-powered-interview-automation",
-  },
-
-  {
-    title: "Dopamine Couch DevOps Infrastructure",
-    icon: Server,
-    description: "Designed and managed a production DevOps setup using Docker Compose, NGINX reverse proxy, and MySQL, supporting staging and production environments with automated deployment.",
-    technologies: ["Docker Compose", "NGINX", "MySQL", "DevOps"],
-    link: "https://github.com/lezinhere/dopaminecouch-devops-infra",
   },
   {
     title: "Cloud-Enabled Smart Door Lock System Using RFID",
