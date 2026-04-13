@@ -11,10 +11,11 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Production-Ready CI/CD Pipeline for Containerized Web Application",
+    title: "Terraform EKS Infrastructure Pipeline using Jenkins",
     icon: Server,
-    description: "Built an end-to-end CI/CD pipeline using Jenkins, GitHub, and Docker. Automated deployments to AWS EC2 with webhook triggers, and implemented CloudWatch monitoring for performance tracking, significantly reducing manual deployment effort.",
-    technologies: ["Jenkins", "GitHub", "Docker", "AWS EC2", "CloudWatch"],
+    description: "Designed an Infrastructure-as-Code setup using Terraform to provision AWS networking resources and integrated a Jenkins pipeline to automate infrastructure deployment with remote state management using S3 and DynamoDB.",
+    technologies: ["Terraform", "Jenkins", "AWS EKS", "S3", "DynamoDB"],
+    link: "https://github.com/lezinhere/terraform-eks-infra",
   },
   {
     title: "Highly Available AWS Infrastructure with Auto Scaling and Monitoring",
@@ -39,6 +40,13 @@ const projects: Project[] = [
     link: "https://github.com/lezinhere/AI-powered-interview-automation",
   },
 
+  {
+    title: "Dopamine Couch DevOps Infrastructure",
+    icon: Server,
+    description: "Designed and managed a production DevOps setup using Docker Compose, NGINX reverse proxy, and MySQL, supporting staging and production environments with automated deployment.",
+    technologies: ["Docker Compose", "NGINX", "MySQL", "DevOps"],
+    link: "https://github.com/lezinhere/dopaminecouch-devops-infra",
+  },
   {
     title: "Cloud-Enabled Smart Door Lock System Using RFID",
     icon: Lock,
