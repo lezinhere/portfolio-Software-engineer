@@ -1,7 +1,15 @@
-import { Cpu, GitBranch, Lock, Server, Cloud, Activity } from "lucide-react";
+import { Cpu, Lock, Server, Cloud, Activity, ExternalLink, LucideIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-const projects = [
+type Project = {
+  title: string;
+  icon: LucideIcon;
+  description: string;
+  technologies: string[];
+  link?: string;
+};
+
+const projects: Project[] = [
   {
     title: "Production-Ready CI/CD Pipeline for Containerized Web Application",
     icon: Server,
@@ -13,12 +21,14 @@ const projects = [
     icon: Cloud,
     description: "Designed a highly available architecture with Auto Scaling, ALB, EC2, and RDS. Implemented a secure VPC with public/private subnets and a NAT Gateway. Integrated CloudFront CDN for performance optimization and applied IAM security best practices.",
     technologies: ["AWS Auto Scaling", "ALB", "EC2", "RDS", "VPC", "CloudFront", "IAM"],
+    link: "https://github.com/lezinhere/aws-devops-architecture-project",
   },
   {
     title: "ClinicCMS - Modern Clinic Management System",
     icon: Activity,
     description: "A full-stack SaaS solution designed to streamline healthcare facility operations. Features dedicated portals for Patients, Doctors, Pharmacists, and Lab Technicians, providing a seamless workflow from smart appointment booking to real-time queues, digital prescriptions, and lab test management.",
     technologies: ["React.js", "Next.js", "MongoDB", "Prisma ORM", "Tailwind CSS"],
+    link: "https://github.com/lezinhere/clinic-cms",
   },
   {
     title: "AI Powered Interview Automation",
@@ -26,14 +36,9 @@ const projects = [
     description:
       "An AI-powered platform designed for automated candidate assessments and interview processes. Built with scalability in mind and deployed on AWS cloud infrastructure for high availability and performance.",
     technologies: ["AWS", "AI/ML", "Python", "Cloud Infrastructure"],
+    link: "https://github.com/lezinhere/AI-powered-interview-automation",
   },
-  {
-    title: "End-to-End Social Media Analytics Platform",
-    icon: GitBranch,
-    description:
-      "Designed and implemented an end-to-end Social Media Analytics Platform with automated data ingestion, ETL processing, containerized microservices, CI/CD pipelines using GitHub & Jenkins, infrastructure provisioning via Terraform, AWS-based scalable architecture, monitoring dashboards in Grafana, and fully automated deployment using Docker and DevOps best practices.",
-    technologies: ["AWS", "Terraform", "Docker", "Jenkins", "Grafana"],
-  },
+
   {
     title: "Cloud-Enabled Smart Door Lock System Using RFID",
     icon: Lock,
@@ -102,7 +107,19 @@ const Projects = () => {
             >
               <div className="space-y-2">
                 <h3 className="text-2xl font-semibold text-black flex items-center gap-3 font-serif">
-                  {project.title}
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-c1 hover:underline underline-offset-4 decoration-1 transition-colors flex items-center gap-2"
+                    >
+                      {project.title}
+                      <ExternalLink className="h-5 w-5" />
+                    </a>
+                  ) : (
+                    project.title
+                  )}
                   <project.icon className="h-5 w-5 text-black/40 group-hover:text-c1 transition-colors" />
                 </h3>
                 <div className="flex flex-wrap gap-2">
