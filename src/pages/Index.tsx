@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import PhilosophyLoop from "../components/PhilosophyLoop";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
@@ -12,6 +13,7 @@ const Index = () => {
 
       <main>
         <Hero />
+        <PhilosophyLoop />
         <Tools />
         {/* Keeping user's content but styled to match */}
         <div className="layout-wrapper">
